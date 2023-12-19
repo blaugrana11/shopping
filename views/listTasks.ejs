@@ -1,0 +1,40 @@
+<head>
+    <link rel="stylesheet" href="style.css">
+    <title>Liste des courses</title>
+</head>
+<body>
+    <h1>Liste des courses</h1>
+
+    <h3>
+    Liste des articles à acheter :
+    </h3>
+    <ul class="barre">
+        <% for(i of bought) { %>
+            <li class="<%= i.purchased == 1 ? 'barre' : '' %>"> <%= i.name %> :  <%= i.quantity %> </li>
+        <% } %>
+    </ul>
+    <ul>
+    <% for(i of not_bought) { %>
+        <li><%= i.name %> :  <%= i.quantity %> - <a href="/delete/<%= i.id_item %>">Effacer</a> - <a href="/achete/<%= i.id_item %>">Acheté</a></li>
+    <% } %>
+
+    </ul>
+    <h3>
+    Ajouter un article :
+    </h3>
+
+    <form action="/add" method="POST">
+        <div class="form-group">
+        <label for="name">Nom :</label>
+        <input type="text" name="name" />
+        </div>
+        <div class="form-group">
+        <label for="quantity">Quantité :</label>
+        <input type="number" name="quantity" />
+        </div>
+        <button class="mon-bouton">Enregistrer</button>
+    </form>
+    
+</body>
+  
+

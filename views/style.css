@@ -1,0 +1,27 @@
+.barre {
+    text-decoration: line-through;
+}
+
+  body {
+    width: 500px;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    border: 1px solid lightgrey;
+    padding: 10px;
+  }  
+
+  label, input {
+    display: block;
+    margin: 5px 0; /* Adjusted margin for better spacing */
+  }
+
+  .mon-bouton {
+    background-color: steelblue; /* Fond steelblue */
+    color: white; /* Texte blanc */
+    text-decoration: none; /* Non souligné */
+    padding: 10px; /* Marge intérieure de 10 pixels */
+    margin: 10px; /* Marge extérieure de 10 pixels */
+    border: none; /* Supprime la bordure par défaut du bouton */
+    border-radius: 5px;
+    cursor: pointer; /* Change le curseur au survol pour indiquer que c'est un élément cliquable */
+  }
